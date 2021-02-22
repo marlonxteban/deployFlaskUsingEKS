@@ -10,9 +10,6 @@ The Flask app used for this project consists of a simple API with three endpoint
 
 The app relies on a secret set as the environment variable `JWT_SECRET` to produce a JWT.
 
-## Initial setup
-1. Fork this project to your Github account.
-
 ## Dependencies
 
 - Docker Engine
