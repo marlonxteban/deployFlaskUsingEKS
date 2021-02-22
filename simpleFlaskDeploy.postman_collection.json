@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "9342916c-49f6-4fe5-9fff-891e2eccc263",
+		"name": "simpleFlaskDeploy",
+		"description": "tests for project 04 deploy to aws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"marlonxteban@gmail.com\",\"password\":\"elPassword\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "send json to generate jtoken"
+			},
+			"response": []
+		},
+		{
+			"name": "contents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MTUxNTEyOTMsIm5iZiI6MTYxMzk0MTY5MywiZW1haWwiOiJtYXJsb254dGViYW5AZ21haWwuY29tIn0.sXXe6TI2elMxT2PDbPL0N_AE0I2D_CV3bG4ru5d0e7A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/contents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"contents"
+					]
+				},
+				"description": "decript token"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
